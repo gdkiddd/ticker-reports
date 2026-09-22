@@ -1,9 +1,179 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><title>Ticker Reports</title></head>
-<body style="font-family:system-ui;max-width:720px;margin:40px auto;padding:0 16px">
-<h1>Ticker Research Reports</h1>
-<ul>
-<li><a href="TRUMP-20260922-2128-v1.html">TRUMP-20260922-2128-v1.html</a> — Official Trump / TRUMP · 综合 3.9/10 · 2026-09-22 21:27 UTC+8</li>
-<li><a href="./ENA-20260922-v2.html">ENA（Ethena）调查报告 2026-09-22 v2（修图）</a></li>
-  <li><a href="PEPE-20260922-2201.html">PEPE 2026-09-22 22:01</a></li>
-</ul>
-</body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>标的调查报告 · 历史归档</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --card:#fff; --text:#1a1d26; --muted:#6b7280;
+    --line:#e5e7eb; --accent:#2563eb; --green:#059669; --red:#dc2626; --amber:#d97706;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Noto Sans SC",sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+  .wrap{max-width:960px;margin:0 auto;padding:28px 16px 64px}
+  header{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between;margin-bottom:20px}
+  h1{font-size:1.45rem;margin:0}
+  .sub{color:var(--muted);font-size:.9rem;margin-top:4px}
+  .toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  input[type=search],select{border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:inherit;background:#fff;min-width:160px}
+  .hint{font-size:.82rem;color:var(--muted);background:#eef2ff;border:1px solid #c7d2fe;border-radius:10px;padding:10px 12px;margin:0 0 18px}
+  .stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:110px}
+  .stat b{display:block;font-size:1.25rem}
+  .stat span{color:var(--muted);font-size:.8rem}
+  .group{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:14px;overflow:hidden}
+  .group-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line);cursor:pointer;user-select:none}
+  .group-h:hover{background:#fafbfc}
+  .ticker{font-weight:700;font-size:1.05rem;letter-spacing:.02em}
+  .name{color:var(--muted);font-weight:500;margin-left:8px;font-size:.92rem}
+  .badge{font-size:.75rem;padding:2px 8px;border-radius:999px;background:#f3f4f6;color:#374151}
+  table{width:100%;border-collapse:collapse;font-size:.92rem}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+  th{font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#fafafa}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:#f9fafb}
+  a{color:var(--accent);text-decoration:none;font-weight:600}
+  a:hover{text-decoration:underline}
+  .score{font-variant-numeric:tabular-nums;font-weight:700}
+  .score.hi{color:var(--green)} .score.mid{color:var(--amber)} .score.lo{color:var(--red)}
+  .advice{font-size:.88rem}
+  .empty{text-align:center;padding:40px;color:var(--muted)}
+  footer{margin-top:28px;color:var(--muted);font-size:.8rem}
+  code{font-size:.85em;background:#f3f4f6;padding:1px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>标的调查报告 · 历史归档</h1>
+      <div class="sub">同一标的可保留多日报告；同一天重复调查不新建，只打开当日已有报告。</div>
+    </div>
+    <div class="toolbar">
+      <input id="q" type="search" placeholder="搜索 ticker / 名称…" />
+      <select id="sort">
+        <option value="date-desc">按日期新→旧</option>
+        <option value="date-asc">按日期旧→新</option>
+        <option value="score-desc">按综合分高→低</option>
+        <option value="ticker">按 ticker</option>
+      </select>
+    </div>
+  </header>
+
+  <p class="hint">规则：文件名规范 <code>TICKER-YYYYMMDD.html</code>。同日同标的仅保留一份；强制重做时原地覆盖并刷新本页。数据来自同目录 <code>manifest.json</code>。</p>
+
+  <div class="stats" id="stats"></div>
+  <div id="list"></div>
+
+  <footer>
+    仓库：<a href="https://github.com/gdkiddd/ticker-reports">gdkiddd/ticker-reports</a>
+    · 本页更新：<span id="updated"></span>
+    · 仅供研究参考，不构成投资建议
+  </footer>
+</div>
+<script>
+const FALLBACK = {"updated_at": "2026-09-22T22:07:00+08:00", "timezone": "Asia/Taipei", "rules": {"one_report_per_ticker_per_day": true, "canonical_filename": "<TICKER>-YYYYMMDD.html", "same_day_repeat": "不生成新文件；打开当日已有报告。仅当用户明确要求强制刷新/重做时，原地覆盖同日文件并更新 index/manifest。"}, "reports": [{"ticker": "ENA", "name": "Ethena", "type": "crypto", "date": "2026-09-22", "generated_at": "2026-09-22T21:04:00+08:00", "score": 6.8, "advice": "轻仓观察", "file": "ENA-20260922-v2b.html", "aliases": ["ENA-20260922-v2.html"], "note": "同日修图版；v2 为同源副本"}, {"ticker": "TRUMP", "name": "Official Trump", "type": "crypto", "date": "2026-09-22", "generated_at": "2026-09-22T21:27:00+08:00", "score": 3.9, "advice": "回避", "file": "TRUMP-20260922-2128-v1.html"}, {"ticker": "PEPE", "name": "Pepe", "type": "crypto", "date": "2026-09-22", "generated_at": "2026-09-22T22:01:00+08:00", "score": 6.4, "advice": "观察", "file": "PEPE-20260922-2201.html"}]};
+
+function scoreClass(s){ if(s==null) return ''; if(s>=7) return 'hi'; if(s>=4.5) return 'mid'; return 'lo'; }
+function fmtDate(d){ return d; }
+function adviceShort(a){ return (a||'—').replace(/[。．].*$/,'').slice(0,12); }
+
+async function loadManifest(){
+  try{
+    const res = await fetch('./manifest.json?ts=' + Date.now(), {cache:'no-store'});
+    if(res.ok) return await res.json();
+  }catch(e){}
+  return FALLBACK;
+}
+
+function groupByTicker(reports){
+  const m = new Map();
+  for(const r of reports){
+    const k = (r.ticker||'').toUpperCase();
+    if(!m.has(k)) m.set(k, []);
+    m.get(k).push(r);
+  }
+  for(const arr of m.values()) arr.sort((a,b)=> (b.date||'').localeCompare(a.date||'') || (b.generated_at||'').localeCompare(a.generated_at||''));
+  return m;
+}
+
+function render(data){
+  const q = (document.getElementById('q').value||'').trim().toLowerCase();
+  const sort = document.getElementById('sort').value;
+  let reports = (data.reports||[]).slice();
+
+  if(q){
+    reports = reports.filter(r =>
+      (r.ticker||'').toLowerCase().includes(q) ||
+      (r.name||'').toLowerCase().includes(q) ||
+      (r.file||'').toLowerCase().includes(q)
+    );
+  }
+
+  // sort groups by latest report under sort mode
+  const groups = groupByTicker(reports);
+  let keys = [...groups.keys()];
+  keys.sort((a,b)=>{
+    const A=groups.get(a)[0], B=groups.get(b)[0];
+    if(sort==='ticker') return a.localeCompare(b);
+    if(sort==='score-desc') return (B.score??-1)-(A.score??-1) || a.localeCompare(b);
+    if(sort==='date-asc') return (A.date||'').localeCompare(B.date||'') || a.localeCompare(b);
+    return (B.date||'').localeCompare(A.date||'') || a.localeCompare(b);
+  });
+
+  // within group secondary sort
+  for(const k of keys){
+    const arr=groups.get(k);
+    if(sort==='score-desc') arr.sort((a,b)=>(b.score??-1)-(a.score??-1)||(b.date||'').localeCompare(a.date||''));
+    else if(sort==='date-asc') arr.sort((a,b)=>(a.date||'').localeCompare(b.date||'')||(a.generated_at||'').localeCompare(b.generated_at||''));
+    else arr.sort((a,b)=>(b.date||'').localeCompare(a.date||'')||(b.generated_at||'').localeCompare(a.generated_at||''));
+  }
+
+  const tickers = new Set(reports.map(r=> (r.ticker||'').toUpperCase()));
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><b>${tickers.size}</b><span>标的数</span></div>
+    <div class="stat"><b>${reports.length}</b><span>报告份数</span></div>
+    <div class="stat"><b>${[...new Set(reports.map(r=>r.date))].length}</b><span>覆盖日期</span></div>`;
+  document.getElementById('updated').textContent = data.updated_at || '—';
+
+  const list = document.getElementById('list');
+  if(!keys.length){ list.innerHTML = '<div class="empty">没有匹配的报告</div>'; return; }
+
+  list.innerHTML = keys.map(k=>{
+    const arr = groups.get(k);
+    const latest = arr[0];
+    const rows = arr.map(r=>`
+      <tr>
+        <td>${fmtDate(r.date)}</td>
+        <td class="score ${scoreClass(r.score)}">${r.score!=null? Number(r.score).toFixed(1)+' / 10':'—'}</td>
+        <td class="advice">${adviceShort(r.advice)}</td>
+        <td><a href="./${encodeURI(r.file)}">${r.file}</a></td>
+        <td style="color:var(--muted);font-size:.85rem">${(r.generated_at||'').replace('T',' ').replace('+08:00',' UTC+8')}</td>
+      </tr>`).join('');
+    return `<section class="group">
+      <div class="group-h" onclick="this.parentElement.classList.toggle('collapsed')">
+        <div><span class="ticker">${k}</span><span class="name">${latest.name||''}</span>
+          <span class="badge">${latest.type||'—'}</span>
+          <span class="badge">${arr.length} 份</span>
+        </div>
+        <div class="score ${scoreClass(latest.score)}">最新 ${latest.score!=null?Number(latest.score).toFixed(1):'—'}</div>
+      </div>
+      <table>
+        <thead><tr><th>日期</th><th>综合分</th><th>建议</th><th>报告</th><th>生成时间</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </section>`;
+  }).join('');
+}
+
+(async function(){
+  const data = await loadManifest();
+  const redraw=()=>render(data);
+  document.getElementById('q').addEventListener('input', redraw);
+  document.getElementById('sort').addEventListener('change', redraw);
+  redraw();
+})();
+</script>
+</body>
+</html>
