@@ -49,6 +49,19 @@ ul.tight li { margin:4px 0; }
 footer { margin-top:18px; font-size:.82rem; color:var(--muted); }
 .disclaimer { background:#fff7ed; border:1px solid #fed7aa; color:#9a3412; padding:10px 12px; border-radius:8px; margin-top:12px; }
 a { color:#0369a1; }
+
+.nav-home{font-size:.9rem;margin:8px 0 0}
+.nav-home a{color:#0369a1;font-weight:600;text-decoration:none}
+.nav-home a:hover{text-decoration:underline}
+.supply-bar{height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-top:6px}
+.supply-bar>i{display:block;height:100%;background:#059669}
+.kpi-dual .v2{font-size:.92rem;font-weight:700;line-height:1.35}
+.quote-zh{font-style:normal;color:#0f172a;font-weight:500;margin-bottom:4px}
+.quote-en{font-size:.78rem;color:#64748b;font-style:italic;margin-top:2px}
+details.orig{margin-top:4px;font-size:.78rem;color:#64748b}
+details.orig summary{cursor:pointer;color:#0369a1}
+#ohlc_tip b{font-weight:600}
+
 </style>
 </head>
 <body>
@@ -59,6 +72,7 @@ a { color:#0369a1; }
     <div class="meta">Ticker: <strong>PEPE</strong> · 类型：Memecoin / ERC-20（+Solana canonical SPL） · 生成：2026-09-22 22:01 UTC+8</div>
   </div>
   <div class="score-badge">综合 6.4/10</div>
+<div class="nav-home"><a href="index.html">← 返回主页</a></div>
 </header>
 
 <section id="f10">
@@ -66,10 +80,11 @@ a { color:#0369a1; }
 <div class="grid">
   <div class="kpi"><div class="k">最新价（CG）</div><div class="v">$0.000004935</div></div>
   <div class="kpi"><div class="k">24h 涨跌</div><div class="v up">+14.9%</div></div>
+  <div class="kpi kpi-dual"><div class="k">7日 / 30日涨幅</div><div class="v2"><span class="up">+45.9%</span><br/><span class="up">+20.7%</span></div><div class="muted">日线收盘（Gate）</div></div>
   <div class="kpi"><div class="k">24h 成交额</div><div class="v">$1.489B</div></div>
   <div class="kpi"><div class="k">市值</div><div class="v">$2.075B</div></div>
   <div class="kpi"><div class="k">FDV</div><div class="v">$2.075B</div></div>
-  <div class="kpi"><div class="k">流通 / 总量 / 上限</div><div class="v" style="font-size:.95rem">420.69T / 420.69T / 420.69T</div></div>
+  <div class="kpi"><div class="k">流通 / 总量 / 上限</div><div class="v" style="font-size:.95rem">420.69T / 420.69T / 420.69T</div><div class="muted" style="margin-top:4px">流通占比 100%</div><div class="supply-bar"><i style="width:100%"></i></div></div>
   <div class="kpi"><div class="k">市值排名</div><div class="v">CG #51 · CMC #43</div></div>
   <div class="kpi"><div class="k">ATH / ATL</div><div class="v" style="font-size:.85rem">$0.00002803 (2024-12-09)<br>$0.0000000551 (2023-04-17)</div></div>
   <div class="kpi"><div class="k">链 / 赛道</div><div class="v" style="font-size:.9rem">Ethereum · Memecoin</div></div>
@@ -142,8 +157,15 @@ a { color:#0369a1; }
 <span class='badge bull'>命中</span> W底 / 圆弧底突破 — 双底构筑后放量突破颈线，偏多；失守颈线则假突破转空（置信度：中高）。颈线约 $0.000004555，图上已标注左底/右底/突破。
 </p>
 <table>
-<thead><tr><th>指标</th><th>信号</th><th>说明</th></tr></thead>
-<tbody><tr><td>MA20/MA50</td><td><span class="badge bull">多</span></td><td>收盘价 &gt; MA20 &gt; MA50，多头排列</td></tr><tr><td>EMA12/26</td><td><span class="badge bull">多</span></td><td>EMA12 &gt; EMA26</td></tr><tr><td>MACD</td><td><span class="badge bull">多</span></td><td>MACD柱&gt;0且线上穿/在信号线上方</td></tr><tr><td>RSI(14)</td><td><span class="badge bear">空</span></td><td>RSI=76.4 超买区，短线回调风险升高</td></tr><tr><td>布林带(20,2)</td><td><span class="badge bear">空</span></td><td>收盘价触及/突破上轨，短线过热</td></tr><tr><td>成交量</td><td><span class="badge bull">多</span></td><td>成交量显著高于20日均量（放量）</td></tr></tbody>
+<thead><tr><th>指标</th><th>数值</th><th>信号</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td>MA20/MA50</td><td>收盘 &gt; MA20 &gt; MA50</td><td><span class="badge bull">多</span></td><td>多头排列</td></tr>
+<tr><td>EMA12/26</td><td>EMA12 &gt; EMA26</td><td><span class="badge bull">多</span></td><td>短中期均线多头</td></tr>
+<tr><td>MACD</td><td>柱&gt;0，线在信号上方</td><td><span class="badge bull">多</span></td><td>动量偏多</td></tr>
+<tr><td>RSI(14)</td><td>76.4</td><td><span class="badge bear">空</span></td><td>超买，短线回调风险升高</td></tr>
+<tr><td>布林带(20,2)</td><td>触及/突破上轨</td><td><span class="badge bear">空</span></td><td>短线过热</td></tr>
+<tr><td>成交量</td><td>显著高于20日均量</td><td><span class="badge bull">多</span></td><td>放量确认</td></tr>
+</tbody>
 </table>
 <p><strong>小结：</strong>收盘价位于 MA20/MA50 上方且 MACD 柱为正，结构偏多；但 RSI≈76.4、价格贴近/越过布林上轨，短线过热。技术面倾向：<strong>偏多（过热）</strong>（分项 7.1/10）。</p>
 </section>
@@ -186,40 +208,45 @@ a { color:#0369a1; }
       <td>RookieXBT<br><span class="muted">粉丝 499,371 · EN</span></td>
       <td><span class="badge bull">多</span></td>
       <td>09-21 22:42</td>
-      <td><div class="quote">$PEPE ready to ignite (need market to permit)</div>
-          <div class="muted">译/要点：称PEPE“准备点燃”，但需大盘允许</div>
+      <td><div class="quote-zh">称PEPE“准备点燃”，但需大盘允许</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">$PEPE ready to ignite (need market to permit)</div></details>
+          
           <a href="https://x.com/RookieXBT/status/2102045778592342110" target="_blank" rel="noopener">原帖</a></td>
       <td>称PEPE“准备点燃”，但需大盘允许</td>
     </tr><tr>
       <td>LanaValentis<br><span class="muted">粉丝 4,738 · EN</span></td>
       <td><span class="badge bull">多</span></td>
       <td>09-06 19:31</td>
-      <td><div class="quote">$PEPE Bullish Flag After Parabolic Pump. Get Ready For The Next Move</div>
-          <div class="muted">译/要点：抛物线拉升后看涨旗形，等待下一波</div>
+      <td><div class="quote-zh">抛物线拉升后看涨旗形，等待下一波</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">$PEPE Bullish Flag After Parabolic Pump. Get Ready For The Next Move</div></details>
+          
           <a href="https://x.com/LanaValentis/status/2096561822560084406" target="_blank" rel="noopener">原帖</a></td>
       <td>抛物线拉升后看涨旗形，等待下一波</td>
     </tr><tr>
       <td>Cryptocowboys6<br><span class="muted">粉丝 2,702 · EN</span></td>
       <td><span class="badge bull">多</span></td>
       <td>09-21 01:06</td>
-      <td><div class="quote">A bullish reversal pattern is forming and a confirmed breakout above the neckline could signal further upside. Already up 114% on this setup</div>
-          <div class="muted">译/要点：看涨反转/颈线突破，称该结构已涨约114%</div>
+      <td><div class="quote-zh">看涨反转/颈线突破，称该结构已涨约114%</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">A bullish reversal pattern is forming and a confirmed breakout above the neckline could signal further upside. Already up 114% on this setup</div></details>
+          
           <a href="https://x.com/Cryptocowboys6/status/2101719686740083007" target="_blank" rel="noopener">原帖</a></td>
       <td>看涨反转/颈线突破，称该结构已涨约114%</td>
     </tr><tr>
       <td>cryptowithgopal<br><span class="muted">粉丝 14,660 · EN</span></td>
       <td><span class="badge bull">多</span></td>
       <td>09-07 17:12</td>
-      <td><div class="quote">$PEPE printing a textbook triangle... A clean breakout could target around $0.0000052</div>
-          <div class="muted">译/要点：三角收敛，向上突破目标约$0.0000052</div>
+      <td><div class="quote-zh">三角收敛，向上突破目标约$0.0000052</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">$PEPE printing a textbook triangle... A clean breakout could target around $0.0000052</div></details>
+          
           <a href="https://x.com/cryptowithgopal/status/2096889432725209376" target="_blank" rel="noopener">原帖</a></td>
       <td>三角收敛，向上突破目标约$0.0000052</td>
     </tr><tr>
       <td>DehuaFi<br><span class="muted">粉丝 5,470 · ZH</span></td>
       <td><span class="badge bull">多</span></td>
       <td>08-26 06:35</td>
-      <td><div class="quote">PEPE幣單週暴漲 60%！牛旗形態再現 佩佩幣下一波目標衝擊$0.0000057？</div>
-          <div class="muted">译/要点：称周涨约60%、牛旗，目标冲击约$0.0000057</div>
+      <td><div class="quote-zh">称周涨约60%、牛旗，目标冲击约$0.0000057</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">PEPE幣單週暴漲 60%！牛旗形態再現 佩佩幣下一波目標衝擊$0.0000057？</div></details>
+          
           <a href="https://x.com/DehuaFi/status/2092380259262111887" target="_blank" rel="noopener">原帖</a></td>
       <td>称周涨约60%、牛旗，目标冲击约$0.0000057</td>
     </tr></tbody>
@@ -231,40 +258,45 @@ a { color:#0369a1; }
       <td>Finora_EN<br><span class="muted">粉丝 22,747 · EN</span></td>
       <td><span class="badge bear">空</span></td>
       <td>09-01 11:49</td>
-      <td><div class="quote">⚠️ $PEPE&#x27;s 0.48% sweep above got rejected fast — bearish structure says this was fuel for continuation lower</div>
-          <div class="muted">译/要点：上方扫流动性后回落，当时倾向空头延续</div>
+      <td><div class="quote-zh">上方扫流动性后回落，当时倾向空头延续</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">⚠️ $PEPE&#x27;s 0.48% sweep above got rejected fast — bearish structure says this was fuel for continuation lower</div></details>
+          
           <a href="https://x.com/Finora_EN/status/2094633636737778140" target="_blank" rel="noopener">原帖</a></td>
       <td>上方扫流动性后回落，当时倾向空头延续</td>
     </tr><tr>
       <td>Finora_EN<br><span class="muted">粉丝 22,747 · EN</span></td>
       <td><span class="badge bear">空</span></td>
       <td>09-01 15:42</td>
-      <td><div class="quote">my bias is bearish here — 4h structure is lower highs and lower lows</div>
-          <div class="muted">译/要点：4H仍LH/LL，反弹视为逆势</div>
+      <td><div class="quote-zh">4H仍LH/LL，反弹视为逆势</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">my bias is bearish here — 4h structure is lower highs and lower lows</div></details>
+          
           <a href="https://x.com/Finora_EN/status/2094692277960462613" target="_blank" rel="noopener">原帖</a></td>
       <td>4H仍LH/LL，反弹视为逆势</td>
     </tr><tr>
       <td>cryptowithgopal<br><span class="muted">粉丝 14,660 · EN</span></td>
       <td><span class="badge bear">空</span></td>
       <td>09-08 18:07</td>
-      <td><div class="quote">$PEPE / PEPE printing a double top formation... A breakdown below $0.00000354 could accelerate</div>
-          <div class="muted">译/要点：双顶形态，跌破支撑或加速下跌</div>
+      <td><div class="quote-zh">双顶形态，跌破支撑或加速下跌</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">$PEPE / PEPE printing a double top formation... A breakdown below $0.00000354 could accelerate</div></details>
+          
           <a href="https://x.com/cryptowithgopal/status/2097265673710002364" target="_blank" rel="noopener">原帖</a></td>
       <td>双顶形态，跌破支撑或加速下跌</td>
     </tr><tr>
       <td>ANCrypto_<br><span class="muted">粉丝 4,743 · EN</span></td>
       <td><span class="badge bear">空</span></td>
       <td>09-22 11:35</td>
-      <td><div class="quote">structure has turned bullish, but extreme momentum means the short-term setup is also becoming increasingly ri…</div>
-          <div class="muted">译/要点：结构转多但动能极端，短线风险上升（偏谨慎）</div>
+      <td><div class="quote-zh">结构转多但动能极端，短线风险上升（偏谨慎）</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">structure has turned bullish, but extreme momentum means the short-term setup is also becoming increasingly ri…</div></details>
+          
           <a href="https://x.com/ANCrypto_/status/2102240407132537016" target="_blank" rel="noopener">原帖</a></td>
       <td>结构转多但动能极端，短线风险上升（偏谨慎）</td>
     </tr><tr>
       <td>媒体综述/技术警示<br><span class="muted">粉丝 — · EN</span></td>
       <td><span class="badge bear">空</span></td>
       <td>09-21 —</td>
-      <td><div class="quote">4-hour RSI reached 82.05... overbought... pullback risk (via CoinAlert / CryptoNews citing market)</div>
-          <div class="muted">译/要点：多家媒体援引4H RSI≈82超买，警示回调；CryptoPatel强调需守住≈$0.00000458</div>
+      <td><div class="quote-zh">多家媒体援引4H RSI≈82超买，警示回调；CryptoPatel强调需守住≈$0.00000458</div>
+          <details class="orig"><summary>英文原文</summary><div class="quote-en">4-hour RSI reached 82.05... overbought... pullback risk (via CoinAlert / CryptoNews citing market)</div></details>
+          
           <a href="https://coinalertnews.com/news/2026/09/21/pepe-price-surge-rsi-warning" target="_blank" rel="noopener">原帖</a></td>
       <td>多家媒体援引4H RSI≈82超买，警示回调；CryptoPatel强调需守住≈$0.00000458</td>
     </tr></tbody>
@@ -289,15 +321,9 @@ a { color:#0369a1; }
 <div class="disclaimer">本报告仅供研究参考，不构成投资建议。</div>
 </section>
 
-<section id="gaps">
-<h2>附录：数据缺口与替代方案</h2>
-<ol>
-<li>CoinGecko API /coins/pepe 等 → HTTP 429 限流 → 改用 CoinGecko 网页 WebFetch + CMC data-api + OKX/Gate 行情；结果：价格/市值/排名可用，但流通量 CG 420.69T 与 CMC≈413.77T 不一致，报告以 CG 为主并标注差异。</li><li>Binance klines → 451 地区限制；Bybit → 403 CloudFront → 改用 Gate.io 日线180根 + OKX 校验；结果：技术图使用 Gate PEPE_USDT 日线（真实OHLC）。</li><li>X search min_faves 算子不可用；部分 search 429 → 改用 search_posts_all（无min_faves）+ 指定大V时间线；结果：英文区观点较充足，中文区高质量$PEPE观点稀缺（大量无关/广告），中文大V分权重下调并注明。</li><li>CryptoPatel 近100条时间线未直接命中$PEPE原文 → 其关键位观点来自多家新闻转述（非一手推文），已标为媒体转述。</li><li>kidstudio 发布技能指向 Mac 侧；box 无 gh 登录；匿名托管尝试失败 → 公网 URL 沿用 gdkiddd.github.io/ticker-reports 约定，待父代理推送。</li><li>WIF/BONK 的 CoinGecko 网页抓取超时/挑战页 → 市值/涨跌改用同日新闻快照 + CMC detail + Gate ticker 交叉。</li>
-</ol>
-<p class="muted">公开链接：<a href="https://gdkiddd.github.io/ticker-reports/PEPE-20260922-2201.html" id="publicLink">https://gdkiddd.github.io/ticker-reports/PEPE-20260922-2201.html</a></p>
-</section>
-
 <footer>
+<p class="nav-home"><a href="index.html">← 返回主页</a></p>
+
 来源：CoinGecko 网页、CoinMarketCap data-api、Gate.io / OKX 公开行情、X (user-X MCP)、公开新闻站点。生成于 2026-09-22 22:01 UTC+8。<br/>
 本报告仅供研究参考，不构成投资建议。
 </footer>
@@ -319,8 +345,90 @@ const VOLUMES = [{"time": "2026-03-27", "value": 953651667257.0, "color": "#fca5
 const MA20 = [{"time": "2026-04-15", "value": 3.4737499999999996e-06}, {"time": "2026-04-16", "value": 3.5088e-06}, {"time": "2026-04-17", "value": 3.5423999999999997e-06}, {"time": "2026-04-18", "value": 3.5674e-06}, {"time": "2026-04-19", "value": 3.5840999999999997e-06}, {"time": "2026-04-20", "value": 3.6015500000000003e-06}, {"time": "2026-04-21", "value": 3.6223e-06}, {"time": "2026-04-22", "value": 3.6453499999999998e-06}, {"time": "2026-04-23", "value": 3.6659000000000003e-06}, {"time": "2026-04-24", "value": 3.6887999999999997e-06}, {"time": "2026-04-25", "value": 3.7066500000000003e-06}, {"time": "2026-04-26", "value": 3.73535e-06}, {"time": "2026-04-27", "value": 3.7447999999999997e-06}, {"time": "2026-04-28", "value": 3.7617999999999997e-06}, {"time": "2026-04-29", "value": 3.7787000000000003e-06}, {"time": "2026-04-30", "value": 3.791e-06}, {"time": "2026-05-01", "value": 3.8059000000000003e-06}, {"time": "2026-05-02", "value": 3.8323e-06}, {"time": "2026-05-03", "value": 3.8418499999999995e-06}, {"time": "2026-05-04", "value": 3.8627e-06}, {"time": "2026-05-05", "value": 3.8825000000000005e-06}, {"time": "2026-05-06", "value": 3.8917500000000005e-06}, {"time": "2026-05-07", "value": 3.9019e-06}, {"time": "2026-05-08", "value": 3.929e-06}, {"time": "2026-05-09", "value": 3.9588e-06}, {"time": "2026-05-10", "value": 3.99145e-06}, {"time": "2026-05-11", "value": 4.01775e-06}, {"time": "2026-05-12", "value": 4.03515e-06}, {"time": "2026-05-13", "value": 4.0465e-06}, {"time": "2026-05-14", "value": 4.0579e-06}, {"time": "2026-05-15", "value": 4.06075e-06}, {"time": "2026-05-16", "value": 4.05395e-06}, {"time": "2026-05-17", "value": 4.04245e-06}, {"time": "2026-05-18", "value": 4.03335e-06}, {"time": "2026-05-19", "value": 4.0229e-06}, {"time": "2026-05-20", "value": 4.01515e-06}, {"time": "2026-05-21", "value": 4.0084e-06}, {"time": "2026-05-22", "value": 3.98895e-06}, {"time": "2026-05-23", "value": 3.9740500000000005e-06}, {"time": "2026-05-24", "value": 3.95375e-06}, {"time": "2026-05-25", "value": 3.92775e-06}, {"time": "2026-05-26", "value": 3.8952e-06}, {"time": "2026-05-27", "value": 3.860900000000001e-06}, {"time": "2026-05-28", "value": 3.81415e-06}, {"time": "2026-05-29", "value": 3.7712e-06}, {"time": "2026-05-30", "value": 3.7212e-06}, {"time": "2026-05-31", "value": 3.6752000000000004e-06}, {"time": "2026-06-01", "value": 3.6390499999999995e-06}, {"time": "2026-06-02", "value": 3.59195e-06}, {"time": "2026-06-03", "value": 3.54345e-06}, {"time": "2026-06-04", "value": 3.49575e-06}, {"time": "2026-06-05", "value": 3.4424000000000003e-06}, {"time": "2026-06-06", "value": 3.3924999999999997e-06}, {"time": "2026-06-07", "value": 3.34845e-06}, {"time": "2026-06-08", "value": 3.3069499999999997e-06}, {"time": "2026-06-09", "value": 3.2598e-06}, {"time": "2026-06-10", "value": 3.20425e-06}, {"time": "2026-06-11", "value": 3.1636e-06}, {"time": "2026-06-12", "value": 3.12175e-06}, {"time": "2026-06-13", "value": 3.0855999999999997e-06}, {"time": "2026-06-14", "value": 3.05175e-06}, {"time": "2026-06-15", "value": 3.02345e-06}, {"time": "2026-06-16", "value": 2.9973e-06}, {"time": "2026-06-17", "value": 2.97555e-06}, {"time": "2026-06-18", "value": 2.94865e-06}, {"time": "2026-06-19", "value": 2.91945e-06}, {"time": "2026-06-20", "value": 2.89015e-06}, {"time": "2026-06-21", "value": 2.8586e-06}, {"time": "2026-06-22", "value": 2.8433999999999997e-06}, {"time": "2026-06-23", "value": 2.82195e-06}, {"time": "2026-06-24", "value": 2.8008999999999997e-06}, {"time": "2026-06-25", "value": 2.78405e-06}, {"time": "2026-06-26", "value": 2.7692499999999998e-06}, {"time": "2026-06-27", "value": 2.7471000000000003e-06}, {"time": "2026-06-28", "value": 2.7241e-06}, {"time": "2026-06-29", "value": 2.70305e-06}, {"time": "2026-06-30", "value": 2.6849e-06}, {"time": "2026-07-01", "value": 2.6616499999999997e-06}, {"time": "2026-07-02", "value": 2.64345e-06}, {"time": "2026-07-03", "value": 2.63925e-06}, {"time": "2026-07-04", "value": 2.63005e-06}, {"time": "2026-07-05", "value": 2.6205e-06}, {"time": "2026-07-06", "value": 2.6097e-06}, {"time": "2026-07-07", "value": 2.5953999999999997e-06}, {"time": "2026-07-08", "value": 2.5832e-06}, {"time": "2026-07-09", "value": 2.5721e-06}, {"time": "2026-07-10", "value": 2.5701e-06}, {"time": "2026-07-11", "value": 2.56615e-06}, {"time": "2026-07-12", "value": 2.56405e-06}, {"time": "2026-07-13", "value": 2.5658e-06}, {"time": "2026-07-14", "value": 2.58e-06}, {"time": "2026-07-15", "value": 2.6015e-06}, {"time": "2026-07-16", "value": 2.6185e-06}, {"time": "2026-07-17", "value": 2.6369e-06}, {"time": "2026-07-18", "value": 2.6571e-06}, {"time": "2026-07-19", "value": 2.6811e-06}, {"time": "2026-07-20", "value": 2.7107e-06}, {"time": "2026-07-21", "value": 2.7385e-06}, {"time": "2026-07-22", "value": 2.7607499999999998e-06}, {"time": "2026-07-23", "value": 2.7614e-06}, {"time": "2026-07-24", "value": 2.76065e-06}, {"time": "2026-07-25", "value": 2.7599499999999997e-06}, {"time": "2026-07-26", "value": 2.7722999999999997e-06}, {"time": "2026-07-27", "value": 2.78055e-06}, {"time": "2026-07-28", "value": 2.7907e-06}, {"time": "2026-07-29", "value": 2.7968e-06}, {"time": "2026-07-30", "value": 2.79505e-06}, {"time": "2026-07-31", "value": 2.79735e-06}, {"time": "2026-08-01", "value": 2.79775e-06}, {"time": "2026-08-02", "value": 2.8067e-06}, {"time": "2026-08-03", "value": 2.81125e-06}, {"time": "2026-08-04", "value": 2.8163e-06}, {"time": "2026-08-05", "value": 2.8238e-06}, {"time": "2026-08-06", "value": 2.8272e-06}, {"time": "2026-08-07", "value": 2.82985e-06}, {"time": "2026-08-08", "value": 2.8307e-06}, {"time": "2026-08-09", "value": 2.82885e-06}, {"time": "2026-08-10", "value": 2.82875e-06}, {"time": "2026-08-11", "value": 2.82635e-06}, {"time": "2026-08-12", "value": 2.82105e-06}, {"time": "2026-08-13", "value": 2.8194e-06}, {"time": "2026-08-14", "value": 2.81545e-06}, {"time": "2026-08-15", "value": 2.7975e-06}, {"time": "2026-08-16", "value": 2.78475e-06}, {"time": "2026-08-17", "value": 2.7737e-06}, {"time": "2026-08-18", "value": 2.76685e-06}, {"time": "2026-08-19", "value": 2.7726e-06}, {"time": "2026-08-20", "value": 2.79525e-06}, {"time": "2026-08-21", "value": 2.8625e-06}, {"time": "2026-08-22", "value": 2.92075e-06}, {"time": "2026-08-23", "value": 2.9801499999999997e-06}, {"time": "2026-08-24", "value": 3.038e-06}, {"time": "2026-08-25", "value": 3.08515e-06}, {"time": "2026-08-26", "value": 3.1374999999999996e-06}, {"time": "2026-08-27", "value": 3.1915999999999996e-06}, {"time": "2026-08-28", "value": 3.2337e-06}, {"time": "2026-08-29", "value": 3.2724500000000003e-06}, {"time": "2026-08-30", "value": 3.2989e-06}, {"time": "2026-08-31", "value": 3.3347499999999997e-06}, {"time": "2026-09-01", "value": 3.37465e-06}, {"time": "2026-09-02", "value": 3.41185e-06}, {"time": "2026-09-03", "value": 3.46435e-06}, {"time": "2026-09-04", "value": 3.5094e-06}, {"time": "2026-09-05", "value": 3.56155e-06}, {"time": "2026-09-06", "value": 3.6149999999999997e-06}, {"time": "2026-09-07", "value": 3.6667e-06}, {"time": "2026-09-08", "value": 3.70575e-06}, {"time": "2026-09-09", "value": 3.7192e-06}, {"time": "2026-09-10", "value": 3.6748e-06}, {"time": "2026-09-11", "value": 3.6365000000000002e-06}, {"time": "2026-09-12", "value": 3.60295e-06}, {"time": "2026-09-13", "value": 3.56885e-06}, {"time": "2026-09-14", "value": 3.5506500000000005e-06}, {"time": "2026-09-15", "value": 3.52725e-06}, {"time": "2026-09-16", "value": 3.5027999999999997e-06}, {"time": "2026-09-17", "value": 3.4984999999999996e-06}, {"time": "2026-09-18", "value": 3.50645e-06}, {"time": "2026-09-19", "value": 3.542e-06}, {"time": "2026-09-20", "value": 3.56385e-06}, {"time": "2026-09-21", "value": 3.6282499999999995e-06}, {"time": "2026-09-22", "value": 3.7039000000000002e-06}];
 const MA50 = [{"time": "2026-05-15", "value": 3.7792e-06}, {"time": "2026-05-16", "value": 3.78886e-06}, {"time": "2026-05-17", "value": 3.79676e-06}, {"time": "2026-05-18", "value": 3.80522e-06}, {"time": "2026-05-19", "value": 3.81178e-06}, {"time": "2026-05-20", "value": 3.818e-06}, {"time": "2026-05-21", "value": 3.82602e-06}, {"time": "2026-05-22", "value": 3.83138e-06}, {"time": "2026-05-23", "value": 3.8359e-06}, {"time": "2026-05-24", "value": 3.83932e-06}, {"time": "2026-05-25", "value": 3.84136e-06}, {"time": "2026-05-26", "value": 3.84516e-06}, {"time": "2026-05-27", "value": 3.84022e-06}, {"time": "2026-05-28", "value": 3.83706e-06}, {"time": "2026-05-29", "value": 3.8345e-06}, {"time": "2026-05-30", "value": 3.83014e-06}, {"time": "2026-05-31", "value": 3.8258e-06}, {"time": "2026-06-01", "value": 3.82494e-06}, {"time": "2026-06-02", "value": 3.8121999999999997e-06}, {"time": "2026-06-03", "value": 3.8033199999999998e-06}, {"time": "2026-06-04", "value": 3.788e-06}, {"time": "2026-06-05", "value": 3.7623000000000004e-06}, {"time": "2026-06-06", "value": 3.7368e-06}, {"time": "2026-06-07", "value": 3.71764e-06}, {"time": "2026-06-08", "value": 3.7009199999999997e-06}, {"time": "2026-06-09", "value": 3.6813e-06}, {"time": "2026-06-10", "value": 3.6588e-06}, {"time": "2026-06-11", "value": 3.63868e-06}, {"time": "2026-06-12", "value": 3.61824e-06}, {"time": "2026-06-13", "value": 3.5980399999999995e-06}, {"time": "2026-06-14", "value": 3.5794e-06}, {"time": "2026-06-15", "value": 3.5604000000000003e-06}, {"time": "2026-06-16", "value": 3.54122e-06}, {"time": "2026-06-17", "value": 3.52256e-06}, {"time": "2026-06-18", "value": 3.50248e-06}, {"time": "2026-06-19", "value": 3.48152e-06}, {"time": "2026-06-20", "value": 3.4594999999999997e-06}, {"time": "2026-06-21", "value": 3.43546e-06}, {"time": "2026-06-22", "value": 3.41282e-06}, {"time": "2026-06-23", "value": 3.38702e-06}, {"time": "2026-06-24", "value": 3.35536e-06}, {"time": "2026-06-25", "value": 3.31922e-06}, {"time": "2026-06-26", "value": 3.28374e-06}, {"time": "2026-06-27", "value": 3.24488e-06}, {"time": "2026-06-28", "value": 3.20704e-06}, {"time": "2026-06-29", "value": 3.1659400000000003e-06}, {"time": "2026-06-30", "value": 3.12566e-06}, {"time": "2026-07-01", "value": 3.0892799999999997e-06}, {"time": "2026-07-02", "value": 3.05702e-06}, {"time": "2026-07-03", "value": 3.0305799999999997e-06}, {"time": "2026-07-04", "value": 3.00712e-06}, {"time": "2026-07-05", "value": 2.9870199999999997e-06}, {"time": "2026-07-06", "value": 2.9681199999999997e-06}, {"time": "2026-07-07", "value": 2.9473800000000002e-06}, {"time": "2026-07-08", "value": 2.9265999999999996e-06}, {"time": "2026-07-09", "value": 2.9043e-06}, {"time": "2026-07-10", "value": 2.8841799999999997e-06}, {"time": "2026-07-11", "value": 2.8663400000000002e-06}, {"time": "2026-07-12", "value": 2.84882e-06}, {"time": "2026-07-13", "value": 2.83184e-06}, {"time": "2026-07-14", "value": 2.8162599999999998e-06}, {"time": "2026-07-15", "value": 2.80174e-06}, {"time": "2026-07-16", "value": 2.7867799999999996e-06}, {"time": "2026-07-17", "value": 2.77398e-06}, {"time": "2026-07-18", "value": 2.7614000000000004e-06}, {"time": "2026-07-19", "value": 2.7499e-06}, {"time": "2026-07-20", "value": 2.73986e-06}, {"time": "2026-07-21", "value": 2.72906e-06}, {"time": "2026-07-22", "value": 2.7245399999999998e-06}, {"time": "2026-07-23", "value": 2.71776e-06}, {"time": "2026-07-24", "value": 2.7130799999999998e-06}, {"time": "2026-07-25", "value": 2.71404e-06}, {"time": "2026-07-26", "value": 2.72004e-06}, {"time": "2026-07-27", "value": 2.7202200000000004e-06}, {"time": "2026-07-28", "value": 2.7201e-06}, {"time": "2026-07-29", "value": 2.7191e-06}, {"time": "2026-07-30", "value": 2.7205000000000005e-06}, {"time": "2026-07-31", "value": 2.71984e-06}, {"time": "2026-08-01", "value": 2.7192200000000003e-06}, {"time": "2026-08-02", "value": 2.72028e-06}, {"time": "2026-08-03", "value": 2.7200599999999998e-06}, {"time": "2026-08-04", "value": 2.7188800000000002e-06}, {"time": "2026-08-05", "value": 2.71738e-06}, {"time": "2026-08-06", "value": 2.71464e-06}, {"time": "2026-08-07", "value": 2.7138800000000003e-06}, {"time": "2026-08-08", "value": 2.7144000000000002e-06}, {"time": "2026-08-09", "value": 2.71534e-06}, {"time": "2026-08-10", "value": 2.7171200000000003e-06}, {"time": "2026-08-11", "value": 2.71772e-06}, {"time": "2026-08-12", "value": 2.7174000000000004e-06}, {"time": "2026-08-13", "value": 2.72048e-06}, {"time": "2026-08-14", "value": 2.7266e-06}, {"time": "2026-08-15", "value": 2.7313400000000003e-06}, {"time": "2026-08-16", "value": 2.7352799999999998e-06}, {"time": "2026-08-17", "value": 2.73994e-06}, {"time": "2026-08-18", "value": 2.74462e-06}, {"time": "2026-08-19", "value": 2.7555800000000002e-06}, {"time": "2026-08-20", "value": 2.77328e-06}, {"time": "2026-08-21", "value": 2.8068400000000002e-06}, {"time": "2026-08-22", "value": 2.83288e-06}, {"time": "2026-08-23", "value": 2.8601e-06}, {"time": "2026-08-24", "value": 2.88588e-06}, {"time": "2026-08-25", "value": 2.9075599999999997e-06}, {"time": "2026-08-26", "value": 2.93148e-06}, {"time": "2026-08-27", "value": 2.9572399999999997e-06}, {"time": "2026-08-28", "value": 2.97904e-06}, {"time": "2026-08-29", "value": 2.9962800000000003e-06}, {"time": "2026-08-30", "value": 3.01022e-06}, {"time": "2026-08-31", "value": 3.026e-06}, {"time": "2026-09-01", "value": 3.04094e-06}, {"time": "2026-09-02", "value": 3.05322e-06}, {"time": "2026-09-03", "value": 3.07174e-06}, {"time": "2026-09-04", "value": 3.0876999999999997e-06}, {"time": "2026-09-05", "value": 3.10514e-06}, {"time": "2026-09-06", "value": 3.1231e-06}, {"time": "2026-09-07", "value": 3.13886e-06}, {"time": "2026-09-08", "value": 3.1535999999999998e-06}, {"time": "2026-09-09", "value": 3.16556e-06}, {"time": "2026-09-10", "value": 3.17246e-06}, {"time": "2026-09-11", "value": 3.18292e-06}, {"time": "2026-09-12", "value": 3.1970199999999998e-06}, {"time": "2026-09-13", "value": 3.20944e-06}, {"time": "2026-09-14", "value": 3.2189000000000002e-06}, {"time": "2026-09-15", "value": 3.23016e-06}, {"time": "2026-09-16", "value": 3.2420799999999997e-06}, {"time": "2026-09-17", "value": 3.25972e-06}, {"time": "2026-09-18", "value": 3.2808400000000003e-06}, {"time": "2026-09-19", "value": 3.30808e-06}, {"time": "2026-09-20", "value": 3.33244e-06}, {"time": "2026-09-21", "value": 3.36956e-06}, {"time": "2026-09-22", "value": 3.41028e-06}];
 const PATTERN = {"name": "W底 / 圆弧底突破", "side": "bull", "meaning": "双底构筑后放量突破颈线，偏多；失守颈线则假突破转空", "confidence": "中高", "points": [{"time": "2026-05-17", "price": 3.542e-06, "label": "左底"}, {"time": "2026-08-30", "price": 3.363e-06, "label": "右底"}, {"time": "2026-09-21", "price": 4.763e-06, "label": "突破"}], "neckline": 4.555e-06, "neck_from": "2026-05-17", "neck_to": "2026-09-22"};
+
+/* ===== UI v2: price format + tooltip ===== */
+function _uiPricePrecision(p){
+  var a = Math.abs(Number(p)||0);
+  if(!a) return 2;
+  if(a >= 100) return 2;
+  if(a >= 1) return 3;
+  if(a >= 0.1) return 4;
+  if(a >= 0.01) return 5;
+  if(a >= 0.001) return 6;
+  var exp = Math.floor(Math.log10(a));
+  return Math.min(12, Math.max(6, -exp + 3));
+}
+function _uiFormatPrice(p){
+  if(p==null || !isFinite(p)) return '—';
+  var prec = _uiPricePrecision(p);
+  var s = Number(p).toFixed(prec);
+  if(Math.abs(p) < 0.01){
+    // trim only trailing zeros beyond needed sig, keep leading zeros after decimal
+    return s;
+  }
+  return s.replace(/\.?0+$/,'') === '' ? s : s;
+}
+function _uiMinMove(p){
+  var prec = _uiPricePrecision(p);
+  return Math.pow(10, -prec);
+}
+function _uiFmtVol(v){
+  if(v==null || !isFinite(v)) return '—';
+  if(v >= 1e9) return (v/1e9).toFixed(2)+'B';
+  if(v >= 1e6) return (v/1e6).toFixed(2)+'M';
+  if(v >= 1e3) return (v/1e3).toFixed(2)+'K';
+  return String(Math.round(v));
+}
+function _uiInstallTooltip(chart, chartEl, candleSeries, klines, volumes){
+  var tip = document.createElement('div');
+  tip.id = 'ohlc_tip';
+  tip.style.cssText = 'display:none;position:absolute;z-index:20;pointer-events:none;background:rgba(15,23,42,.92);color:#f8fafc;padding:8px 10px;border-radius:8px;font-size:12px;line-height:1.45;min-width:160px;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+  chartEl.style.position = 'relative';
+  chartEl.appendChild(tip);
+  var byTime = {};
+  for(var i=0;i<klines.length;i++) byTime[klines[i].time] = {k:klines[i], i:i};
+  var volBy = {};
+  if(volumes) for(var j=0;j<volumes.length;j++) volBy[volumes[j].time] = volumes[j].value;
+  chart.subscribeCrosshairMove(function(param){
+    if(!param || param.time === undefined || !param.point || param.point.x < 0 || param.point.y < 0){
+      tip.style.display = 'none'; return;
+    }
+    var t = param.time;
+    // business day string
+    var key = (typeof t === 'object' && t.year) ? (t.year+'-'+String(t.month).padStart(2,'0')+'-'+String(t.day).padStart(2,'0')) : t;
+    var row = byTime[key];
+    var d = param.seriesData && param.seriesData.get ? param.seriesData.get(candleSeries) : null;
+    if(!d && row) d = row.k;
+    if(!d){ tip.style.display='none'; return; }
+    var o=d.open, h=d.high, l=d.low, c=d.close;
+    var chg = (o && o!==0) ? ((c-o)/o*100) : null;
+    var chgStr = chg==null ? '—' : ((chg>=0?'+':'')+chg.toFixed(2)+'%');
+    var chgColor = chg==null ? '#94a3b8' : (chg>=0 ? '#4ade80' : '#f87171');
+    var vol = volBy[key];
+    tip.innerHTML =
+      '<div style="font-weight:700;margin-bottom:4px">'+key+'</div>'+
+      '<div>开 <b>'+_uiFormatPrice(o)+'</b></div>'+
+      '<div>高 <b>'+_uiFormatPrice(h)+'</b></div>'+
+      '<div>低 <b>'+_uiFormatPrice(l)+'</b></div>'+
+      '<div>收 <b>'+_uiFormatPrice(c)+'</b></div>'+
+      '<div>涨跌 <b style="color:'+chgColor+'">'+chgStr+'</b></div>'+
+      '<div>量 <b>'+_uiFmtVol(vol)+'</b></div>';
+    tip.style.display = 'block';
+    var x = param.point.x + 16;
+    var y = param.point.y + 16;
+    var tw = tip.offsetWidth || 170;
+    var th = tip.offsetHeight || 120;
+    if(x + tw > chartEl.clientWidth - 8) x = param.point.x - tw - 12;
+    if(y + th > chartEl.clientHeight - 8) y = param.point.y - th - 8;
+    if(x < 4) x = 4; if(y < 4) y = 4;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  });
+}
+
 const chartEl = document.getElementById('tv_chart');
 const chart = LightweightCharts.createChart(chartEl, {
+  localization: { priceFormatter: _uiFormatPrice },
   layout: { background: { color: '#ffffff' }, textColor: '#334155' },
   grid: { vertLines: { color: '#f1f5f9' }, horzLines: { color: '#f1f5f9' } },
   crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
@@ -331,13 +439,14 @@ const chart = LightweightCharts.createChart(chartEl, {
 const candleSeries = chart.addCandlestickSeries({
   upColor: '#16a34a', downColor: '#dc2626', borderUpColor: '#16a34a',
   borderDownColor: '#dc2626', wickUpColor: '#16a34a', wickDownColor: '#dc2626',
+  priceFormat: { type: 'price', precision: 9, minMove: 1e-09 },
 });
 candleSeries.setData(KLINES);
 const volSeries = chart.addHistogramSeries({ priceFormat: { type: 'volume' }, priceScaleId: 'vol' });
 chart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.8, bottom: 0 } });
 volSeries.setData(VOLUMES);
-const ma20Series = chart.addLineSeries({ color: '#2563eb', lineWidth: 2, title: 'MA20' });
-const ma50Series = chart.addLineSeries({ color: '#d97706', lineWidth: 2, title: 'MA50' });
+const ma20Series = chart.addLineSeries({ color: '#2563eb', lineWidth: 2, title: 'MA20' , priceFormat: { type: 'price', precision: 9, minMove: 1e-09 } });
+const ma50Series = chart.addLineSeries({ color: '#d97706', lineWidth: 2, title: 'MA50' , priceFormat: { type: 'price', precision: 9, minMove: 1e-09 } });
 ma20Series.setData(MA20);
 ma50Series.setData(MA50);
 if (PATTERN && PATTERN.neckline) {

@@ -58,12 +58,26 @@ ul { padding-left:1.2rem; }
 .neg { color:var(--red); font-weight:600; }
 .pattern-box { margin-top:10px; border-left:4px solid var(--green); }
 code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px; }
+
+.nav-home{font-size:.9rem;margin:8px 0 0}
+.nav-home a{color:#0369a1;font-weight:600;text-decoration:none}
+.nav-home a:hover{text-decoration:underline}
+.supply-bar{height:8px;background:#e2e8f0;border-radius:999px;overflow:hidden;margin-top:6px}
+.supply-bar>i{display:block;height:100%;background:#059669}
+.kpi-dual .v2{font-size:.92rem;font-weight:700;line-height:1.35}
+.quote-zh{font-style:normal;color:#0f172a;font-weight:500;margin-bottom:4px}
+.quote-en{font-size:.78rem;color:#64748b;font-style:italic;margin-top:2px}
+details.orig{margin-top:4px;font-size:.78rem;color:#64748b}
+details.orig summary{cursor:pointer;color:#0369a1}
+#ohlc_tip b{font-weight:600}
+
 </style>
 </head>
 <body>
 <div class="wrap">
   <h1>ENA（Ethena）单标的调查报告</h1>
   <div class="meta">生成时点：2026-09-22 21:04 UTC+8 · 版本 v2 · 数据以标注来源为准 · 禁止当作投资建议</div>
+  <div class="nav-home"><a href="index.html">← 返回主页</a></div>
 
   <div class="scorebox" style="margin-bottom:16px;">
     <div class="card score"><div class="lbl">综合分</div><div class="big">6.8</div><div class="note">/10</div></div>
@@ -83,9 +97,10 @@ code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px;
     <div class="card"><div class="lbl">市值排名</div><div class="val">#41</div><div class="note">CoinMarketCap 页面 · 2026-09-22 21:04 UTC+8<br/>对照 CoinPaprika API 第 49（口径差异）</div></div>
     <div class="card"><div class="lbl">价格（OKX）</div><div class="val">$0.21345</div><div class="note">2026-09-22 21:04 UTC+8</div></div>
     <div class="card"><div class="lbl">24h 涨跌</div><div class="val neg">-6.1%</div><div class="note">相对 OKX open24h $0.22741</div></div>
+    <div class="card"><div class="lbl">7日 / 30日涨幅</div><div class="val" style="font-size:1.05rem;line-height:1.35"><span class="pos">+48.6%</span><br/><span class="pos">+24.8%</span></div><div class="note">日线收盘（OKX 内嵌 · 至 2026-09-21）</div></div>
     <div class="card"><div class="lbl">市值</div><div class="val">$2.13B</div><div class="note">CMC · 2026-09-22 21:04 UTC+8</div></div>
     <div class="card"><div class="lbl">FDV</div><div class="val">$3.16B</div><div class="note">CMC</div></div>
-    <div class="card"><div class="lbl">流通 / 总量</div><div class="val">10.09B / 15B</div><div class="note">CMC</div></div>
+    <div class="card"><div class="lbl">流通 / 总量</div><div class="val">10.09B / 15B</div><div class="note">CMC · 流通占比 67.3%</div><div class="supply-bar"><i style="width:67.3%"></i></div></div>
     <div class="card"><div class="lbl">24h 量（全市场）</div><div class="val">$690.4M</div><div class="note">CMC</div></div>
     <div class="card"><div class="lbl">24h 高/低（OKX）</div><div class="val">$0.22862 / $0.20514</div></div>
     <div class="card"><div class="lbl">ATH / ATL</div><div class="val">$1.52 / $0.07024</div><div class="note">ATH 2024-04-11；ATL 2026-06-30 · CMC</div></div>
@@ -136,7 +151,7 @@ code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px;
   </div>
 
   <table style="margin-top:12px;">
-    <tr><th>指标</th><th>数值</th><th>偏向</th><th>说明</th></tr>
+    <tr><th>指标</th><th>数值</th><th>信号</th><th>说明</th></tr>
     <tr><td>现价（live）</td><td>$0.21345</td><td><span class="badge bull">多</span></td><td>OKX ticker vs MA20</td></tr>
     <tr><td>MA20</td><td>$0.16237</td><td><span class="badge bull">多</span></td><td>价在均线上方</td></tr>
     <tr><td>MA50</td><td>$0.13472</td><td><span class="badge bull">多</span></td><td>中期趋势向上</td></tr>
@@ -205,9 +220,9 @@ code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px;
   <h3>多方代表性观点（5）</h3>
   <table>
     <tr><th>大V（粉丝）</th><th>多/空</th><th>时间(UTC+8)</th><th>原话/观点(+链接)</th><th>总结</th></tr>
-    <tr><td>Arthur Hayes (@CryptoHayes)<br/><span class="note">粉丝 813,796（X API）</span></td><td><span class="badge bull">多</span></td><td>2026-08-20 05:57<br/>及 09-20 媒体报道喊单 $0.50</td><td>原帖：「An $ENA 5 bagger is just too easy ...」<br/><a href="https://x.com/CryptoHayes/status/2090558888215191669" target="_blank" rel="noopener">X 原帖</a>；09-20 $0.50 目标见 <a href="https://www.lookonchain.com/feeds/73275" target="_blank" rel="noopener">Lookonchain</a>（原帖检索窗口未命中，以二次来源标注）</td><td>高影响力持续看多；09-20 目标价催化脉冲。</td></tr>
+    <tr><td>Arthur Hayes (@CryptoHayes)<br/><span class="note">粉丝 813,796（X API）</span></td><td><span class="badge bull">多</span></td><td>2026-08-20 05:57<br/>及 09-20 媒体报道喊单 $0.50</td><td><div class="quote-zh">称 ENA「轻松五倍」空间仍在……</div><details class="orig"><summary>英文原文</summary><div class="quote-en">An $ENA 5 bagger is just too easy ...</div></details><br/><a href="https://x.com/CryptoHayes/status/2090558888215191669" target="_blank" rel="noopener">X 原帖</a>；09-20 $0.50 目标见 <a href="https://www.lookonchain.com/feeds/73275" target="_blank" rel="noopener">Lookonchain</a>（原帖检索窗口未命中，以二次来源标注）</td><td>高影响力持续看多；09-20 目标价催化脉冲。</td></tr>
     <tr><td>Crypto Banter (@crypto_banter)<br/><span class="note">粉丝 441,253 · verified</span></td><td><span class="badge bull">多</span></td><td>2026-08-27 22:14</td><td>通报费用开关投票与回购里程碑。<br/><a href="https://x.com/crypto_banter/status/2092979147177939394" target="_blank" rel="noopener">X 原帖</a></td><td>大型英文频道扩散回购叙事。</td></tr>
-    <tr><td>KeeperCF (@Keeperssd)<br/><span class="note">粉丝 3,378</span></td><td><span class="badge bull">多</span></td><td>2026-09-20 01:30</td><td>「I’m still bullish on $ENA… USDe ≈$4.844B… key $7.5B」<br/><a href="https://x.com/Keeperssd/status/2101725704119279946" target="_blank" rel="noopener">X 原帖</a></td><td>跟踪 USDe 进度的持续多头叙事。</td></tr>
+    <tr><td>KeeperCF (@Keeperssd)<br/><span class="note">粉丝 3,378</span></td><td><span class="badge bull">多</span></td><td>2026-09-20 01:30</td><td><div class="quote-zh">仍看多 ENA；USDe≈$4.844B，关键门槛 $7.5B。</div><details class="orig"><summary>英文原文</summary><div class="quote-en">I’m still bullish on $ENA… USDe ≈$4.844B… key $7.5B</div></details><br/><a href="https://x.com/Keeperssd/status/2101725704119279946" target="_blank" rel="noopener">X 原帖</a></td><td>跟踪 USDe 进度的持续多头叙事。</td></tr>
     <tr><td>币鲸 (@0xcoinwhale)<br/><span class="note">粉丝 2,081</span></td><td><span class="badge bull">多</span></td><td>2026-09-20 16:12</td><td>看多稳定币+支付+收入回购闭环与 Ethena Pay。<br/><a href="https://x.com/0xcoinwhale/status/2101585331631903018" target="_blank" rel="noopener">X 原帖</a></td><td>中文区独立开发者偏多产品闭环。</td></tr>
     <tr><td>ilmeaalim.eth (@ilmeaalim)<br/><span class="note">粉丝 25,624</span></td><td><span class="badge bull">多</span></td><td>2026-08-27 23:32</td><td>强调协议收益回购 $ENA、USDe 规模叙事。<br/><a href="https://x.com/ilmeaalim/status/2092998699920379989" target="_blank" rel="noopener">X 原帖</a></td><td>英文区中型 KOL 扩散代币经济学改善。</td></tr>
   </table>
@@ -216,7 +231,7 @@ code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px;
     <tr><th>大V（粉丝）</th><th>多/空</th><th>时间(UTC+8)</th><th>原话/观点(+链接)</th><th>总结</th></tr>
     <tr><td>深潮 TechFlow / PANews 专栏<br/><span class="note">媒体；粉丝未核验（非个人 X）</span></td><td><span class="badge bear">空</span></td><td>2026-09-20</td><td>Hayes 低成本浮盈后喊单，或为退出流动性；0.5 是预期管理。<br/><a href="https://www.panewslab.com/zh/articles/01a0bd63-50dc-732f-8e22-ac26c8a6d700" target="_blank" rel="noopener">来源</a></td><td>中文区代表性谨慎解读。</td></tr>
     <tr><td>The Daily Digits (@The_DailyDigits)<br/><span class="note">粉丝 5,732</span></td><td><span class="badge bear">空</span></td><td>2026-08-28 23:00</td><td>费用开关不是最大项；投资者解锁被压到单一日期 10/5，供给未消失只是前移。<br/><a href="https://x.com/The_DailyDigits/status/2093353109229621346" target="_blank" rel="noopener">X 原帖</a></td><td>强调供应日历风险。</td></tr>
-    <tr><td>Crypto With Gopal (@cryptowithgopal)<br/><span class="note">粉丝 14,655</span></td><td><span class="badge bear">空</span></td><td>2026-09-07 17:41</td><td>「textbook double top… $0.19 rejected twice… path toward $0.10」<br/><a href="https://x.com/cryptowithgopal/status/2096896693480657337" target="_blank" rel="noopener">X 原帖</a></td><td>技术看空（其后价格结构已变化，留作当时空方样本）。</td></tr>
+    <tr><td>Crypto With Gopal (@cryptowithgopal)<br/><span class="note">粉丝 14,655</span></td><td><span class="badge bear">空</span></td><td>2026-09-07 17:41</td><td><div class="quote-zh">教科书式双顶；$0.19 两度受阻，路径指向 $0.10。</div><details class="orig"><summary>英文原文</summary><div class="quote-en">textbook double top… $0.19 rejected twice… path toward $0.10</div></details><br/><a href="https://x.com/cryptowithgopal/status/2096896693480657337" target="_blank" rel="noopener">X 原帖</a></td><td>技术看空（其后价格结构已变化，留作当时空方样本）。</td></tr>
     <tr><td>Nay (@gmnay_)<br/><span class="note">粉丝 6,131</span></td><td><span class="badge bear">空</span></td><td>2026-09-22 20:47</td><td>解锁前供应画像：投资者侧约 1.33B ENA（≈9%）。<br/><a href="https://x.com/gmnay_/status/2102379178599342173" target="_blank" rel="noopener">X 原帖</a></td><td>偏数据警示的供应压力（非全面看空协议）。</td></tr>
     <tr><td>Tokenomist Research<br/><span class="note">研究机构；粉丝不适用</span></td><td><span class="badge bear">空</span></td><td>2026-09-02 更新</td><td>回购未武装；需 USDe 增至 $7.5B；10/5 约 1.41B 释放量级。<br/><a href="https://tokenomist.ai/research/ethena-bought-out-its-sellers-and-deleted-the-investor-unlock-calendar-the-buyback-replacing-it-arms-at-7-5b-usde" target="_blank" rel="noopener">来源</a></td><td>「叙事已定价、现金流未启动+供应脉冲」。</td></tr>
   </table>
@@ -237,16 +252,12 @@ code { font-size:0.85em; background:#f1f5f9; padding:1px 4px; border-radius:4px;
   </div>
   <div class="disclaimer"><strong>免责声明：</strong>本报告仅供研究参考，不构成投资建议。加密资产波动极大，请独立研判并自行承担风险。</div>
 
-  <h2>附录：数据缺口与替代方案</h2>
-  <ul>
-    <li>CoinGecko API：持续 <strong>429</strong> → 市值排名改用 <strong>CMC 页面 #41</strong>，CoinPaprika API 对照第 49。</li>
-    <li>Binance/Bybit 主站地区限制 → 价量用 <strong>OKX</strong>；另成功拉取 <strong>Binance data-api.binance.vision</strong> 与 <strong>Gate</strong> 日线作交叉（报告内嵌 OKX）。</li>
-    <li>CryptoCompare histoday：401；Bitget candles：400 → 已弃用。</li>
-    <li>X API：本版<strong>已可用</strong>，粉丝数已核验；Hayes 09-20「$0.50」原帖在检索窗口未直接命中，以 Lookonchain/KuCoin 等二次来源标注。</li>
-    <li>完整融资轮次表、OTC 买断精确数量：暂无可靠来源。</li>
-    <li>10/5 解锁精确枚数：Tokenomist / 链上研究推算，待官方确认。</li>
-  </ul>
-  <p class="note">报告文件：ENA-20260922-v2.html · 生成 2026-09-22 21:04 UTC+8</p>
+  
+  <footer style="margin-top:18px;font-size:.82rem;color:#64748b;">
+    <p class="nav-home"><a href="index.html">← 返回主页</a></p>
+    <p>部分第三方 API 受限时已用公开页面/交叉行情替代；详情略。仅供研究参考，不构成投资建议。</p>
+  </footer>
+
 </div>
 
 <script>
@@ -265,8 +276,90 @@ const MA20 = [{"time": "2026-02-14", "value": 0.133545}, {"time": "2026-02-15", 
 const MA50 = [{"time": "2026-02-14", "value": 0.181848}, {"time": "2026-02-15", "value": 0.18004}, {"time": "2026-02-16", "value": 0.178208}, {"time": "2026-02-17", "value": 0.176436}, {"time": "2026-02-18", "value": 0.174552}, {"time": "2026-02-19", "value": 0.17264}, {"time": "2026-02-20", "value": 0.170212}, {"time": "2026-02-21", "value": 0.167534}, {"time": "2026-02-22", "value": 0.164516}, {"time": "2026-02-23", "value": 0.161516}, {"time": "2026-02-24", "value": 0.158596}, {"time": "2026-02-25", "value": 0.15602}, {"time": "2026-02-26", "value": 0.153369}, {"time": "2026-02-27", "value": 0.1506}, {"time": "2026-02-28", "value": 0.148094}, {"time": "2026-03-01", "value": 0.145646}, {"time": "2026-03-02", "value": 0.143378}, {"time": "2026-03-03", "value": 0.141252}, {"time": "2026-03-04", "value": 0.138698}, {"time": "2026-03-05", "value": 0.136278}, {"time": "2026-03-06", "value": 0.13399}, {"time": "2026-03-07", "value": 0.131496}, {"time": "2026-03-08", "value": 0.129242}, {"time": "2026-03-09", "value": 0.127502}, {"time": "2026-03-10", "value": 0.125909}, {"time": "2026-03-11", "value": 0.124411}, {"time": "2026-03-12", "value": 0.123176}, {"time": "2026-03-13", "value": 0.121796}, {"time": "2026-03-14", "value": 0.120495}, {"time": "2026-03-15", "value": 0.119461}, {"time": "2026-03-16", "value": 0.11845}, {"time": "2026-03-17", "value": 0.117237}, {"time": "2026-03-18", "value": 0.115813}, {"time": "2026-03-19", "value": 0.114701}, {"time": "2026-03-20", "value": 0.113647}, {"time": "2026-03-21", "value": 0.112818}, {"time": "2026-03-22", "value": 0.111966}, {"time": "2026-03-23", "value": 0.110935}, {"time": "2026-03-24", "value": 0.110097}, {"time": "2026-03-25", "value": 0.109357}, {"time": "2026-03-26", "value": 0.108792}, {"time": "2026-03-27", "value": 0.108174}, {"time": "2026-03-28", "value": 0.10747}, {"time": "2026-03-29", "value": 0.10688}, {"time": "2026-03-30", "value": 0.10629}, {"time": "2026-03-31", "value": 0.105774}, {"time": "2026-04-01", "value": 0.105168}, {"time": "2026-04-02", "value": 0.10447}, {"time": "2026-04-03", "value": 0.103705}, {"time": "2026-04-04", "value": 0.102726}, {"time": "2026-04-05", "value": 0.101954}, {"time": "2026-04-06", "value": 0.101198}, {"time": "2026-04-07", "value": 0.100623}, {"time": "2026-04-08", "value": 0.100056}, {"time": "2026-04-09", "value": 0.09981}, {"time": "2026-04-10", "value": 0.09948}, {"time": "2026-04-11", "value": 0.099093}, {"time": "2026-04-12", "value": 0.098929}, {"time": "2026-04-13", "value": 0.09886}, {"time": "2026-04-14", "value": 0.098825}, {"time": "2026-04-15", "value": 0.098856}, {"time": "2026-04-16", "value": 0.099045}, {"time": "2026-04-17", "value": 0.099439}, {"time": "2026-04-18", "value": 0.099852}, {"time": "2026-04-19", "value": 0.100063}, {"time": "2026-04-20", "value": 0.100124}, {"time": "2026-04-21", "value": 0.100158}, {"time": "2026-04-22", "value": 0.099923}, {"time": "2026-04-23", "value": 0.099792}, {"time": "2026-04-24", "value": 0.099804}, {"time": "2026-04-25", "value": 0.099979}, {"time": "2026-04-26", "value": 0.100101}, {"time": "2026-04-27", "value": 0.100169}, {"time": "2026-04-28", "value": 0.100092}, {"time": "2026-04-29", "value": 0.100061}, {"time": "2026-04-30", "value": 0.100042}, {"time": "2026-05-01", "value": 0.099855}, {"time": "2026-05-02", "value": 0.09971}, {"time": "2026-05-03", "value": 0.099585}, {"time": "2026-05-04", "value": 0.099423}, {"time": "2026-05-05", "value": 0.099449}, {"time": "2026-05-06", "value": 0.099651}, {"time": "2026-05-07", "value": 0.100109}, {"time": "2026-05-08", "value": 0.100629}, {"time": "2026-05-09", "value": 0.101218}, {"time": "2026-05-10", "value": 0.101883}, {"time": "2026-05-11", "value": 0.102421}, {"time": "2026-05-12", "value": 0.102876}, {"time": "2026-05-13", "value": 0.103357}, {"time": "2026-05-14", "value": 0.103623}, {"time": "2026-05-15", "value": 0.103906}, {"time": "2026-05-16", "value": 0.104187}, {"time": "2026-05-17", "value": 0.104443}, {"time": "2026-05-18", "value": 0.104642}, {"time": "2026-05-19", "value": 0.104987}, {"time": "2026-05-20", "value": 0.105274}, {"time": "2026-05-21", "value": 0.105804}, {"time": "2026-05-22", "value": 0.106151}, {"time": "2026-05-23", "value": 0.106516}, {"time": "2026-05-24", "value": 0.106989}, {"time": "2026-05-25", "value": 0.107313}, {"time": "2026-05-26", "value": 0.107643}, {"time": "2026-05-27", "value": 0.107567}, {"time": "2026-05-28", "value": 0.107524}, {"time": "2026-05-29", "value": 0.107365}, {"time": "2026-05-30", "value": 0.10721}, {"time": "2026-05-31", "value": 0.107115}, {"time": "2026-06-01", "value": 0.106909}, {"time": "2026-06-02", "value": 0.107309}, {"time": "2026-06-03", "value": 0.107347}, {"time": "2026-06-04", "value": 0.106852}, {"time": "2026-06-05", "value": 0.106333}, {"time": "2026-06-06", "value": 0.105669}, {"time": "2026-06-07", "value": 0.105071}, {"time": "2026-06-08", "value": 0.104358}, {"time": "2026-06-09", "value": 0.103679}, {"time": "2026-06-10", "value": 0.102987}, {"time": "2026-06-11", "value": 0.102392}, {"time": "2026-06-12", "value": 0.101923}, {"time": "2026-06-13", "value": 0.101385}, {"time": "2026-06-14", "value": 0.100988}, {"time": "2026-06-15", "value": 0.100589}, {"time": "2026-06-16", "value": 0.100329}, {"time": "2026-06-17", "value": 0.100087}, {"time": "2026-06-18", "value": 0.099806}, {"time": "2026-06-19", "value": 0.099494}, {"time": "2026-06-20", "value": 0.099294}, {"time": "2026-06-21", "value": 0.099181}, {"time": "2026-06-22", "value": 0.098871}, {"time": "2026-06-23", "value": 0.098318}, {"time": "2026-06-24", "value": 0.097597}, {"time": "2026-06-25", "value": 0.096803}, {"time": "2026-06-26", "value": 0.095903}, {"time": "2026-06-27", "value": 0.094863}, {"time": "2026-06-28", "value": 0.093838}, {"time": "2026-06-29", "value": 0.092625}, {"time": "2026-06-30", "value": 0.091672}, {"time": "2026-07-01", "value": 0.090894}, {"time": "2026-07-02", "value": 0.089997}, {"time": "2026-07-03", "value": 0.089402}, {"time": "2026-07-04", "value": 0.08883}, {"time": "2026-07-05", "value": 0.088246}, {"time": "2026-07-06", "value": 0.087741}, {"time": "2026-07-07", "value": 0.087139}, {"time": "2026-07-08", "value": 0.086532}, {"time": "2026-07-09", "value": 0.086017}, {"time": "2026-07-10", "value": 0.085546}, {"time": "2026-07-11", "value": 0.085211}, {"time": "2026-07-12", "value": 0.084808}, {"time": "2026-07-13", "value": 0.084463}, {"time": "2026-07-14", "value": 0.084143}, {"time": "2026-07-15", "value": 0.083893}, {"time": "2026-07-16", "value": 0.083764}, {"time": "2026-07-17", "value": 0.08359}, {"time": "2026-07-18", "value": 0.083433}, {"time": "2026-07-19", "value": 0.083337}, {"time": "2026-07-20", "value": 0.083339}, {"time": "2026-07-21", "value": 0.083464}, {"time": "2026-07-22", "value": 0.08294}, {"time": "2026-07-23", "value": 0.082698}, {"time": "2026-07-24", "value": 0.082751}, {"time": "2026-07-25", "value": 0.08264}, {"time": "2026-07-26", "value": 0.082601}, {"time": "2026-07-27", "value": 0.082544}, {"time": "2026-07-28", "value": 0.082537}, {"time": "2026-07-29", "value": 0.082604}, {"time": "2026-07-30", "value": 0.082679}, {"time": "2026-07-31", "value": 0.082738}, {"time": "2026-08-01", "value": 0.082803}, {"time": "2026-08-02", "value": 0.083031}, {"time": "2026-08-03", "value": 0.083066}, {"time": "2026-08-04", "value": 0.083205}, {"time": "2026-08-05", "value": 0.083177}, {"time": "2026-08-06", "value": 0.083273}, {"time": "2026-08-07", "value": 0.083322}, {"time": "2026-08-08", "value": 0.083303}, {"time": "2026-08-09", "value": 0.08322}, {"time": "2026-08-10", "value": 0.08311}, {"time": "2026-08-11", "value": 0.083165}, {"time": "2026-08-12", "value": 0.083248}, {"time": "2026-08-13", "value": 0.083293}, {"time": "2026-08-14", "value": 0.083436}, {"time": "2026-08-15", "value": 0.083525}, {"time": "2026-08-16", "value": 0.083677}, {"time": "2026-08-17", "value": 0.083764}, {"time": "2026-08-18", "value": 0.084104}, {"time": "2026-08-19", "value": 0.084693}, {"time": "2026-08-20", "value": 0.086168}, {"time": "2026-08-21", "value": 0.087628}, {"time": "2026-08-22", "value": 0.089432}, {"time": "2026-08-23", "value": 0.091091}, {"time": "2026-08-24", "value": 0.092524}, {"time": "2026-08-25", "value": 0.093752}, {"time": "2026-08-26", "value": 0.095536}, {"time": "2026-08-27", "value": 0.097397}, {"time": "2026-08-28", "value": 0.098943}, {"time": "2026-08-29", "value": 0.100456}, {"time": "2026-08-30", "value": 0.101863}, {"time": "2026-08-31", "value": 0.103537}, {"time": "2026-09-01", "value": 0.104883}, {"time": "2026-09-02", "value": 0.106577}, {"time": "2026-09-03", "value": 0.108159}, {"time": "2026-09-04", "value": 0.109792}, {"time": "2026-09-05", "value": 0.11162}, {"time": "2026-09-06", "value": 0.113289}, {"time": "2026-09-07", "value": 0.114891}, {"time": "2026-09-08", "value": 0.116298}, {"time": "2026-09-09", "value": 0.117482}, {"time": "2026-09-10", "value": 0.118673}, {"time": "2026-09-11", "value": 0.119809}, {"time": "2026-09-12", "value": 0.120859}, {"time": "2026-09-13", "value": 0.121981}, {"time": "2026-09-14", "value": 0.123078}, {"time": "2026-09-15", "value": 0.124197}, {"time": "2026-09-16", "value": 0.125659}, {"time": "2026-09-17", "value": 0.127354}, {"time": "2026-09-18", "value": 0.129741}, {"time": "2026-09-19", "value": 0.132198}, {"time": "2026-09-20", "value": 0.134717}, {"time": "2026-09-21", "value": 0.137145}];
 const PATTERN = {"name": "\u53cc\u5e95 / W\u5e95", "side": "bull", "meaning": "\u770b\u591a\uff1a\u4e24\u4f4e\u70b9\u63a5\u8fd1\u540e\u5411\u4e0a\u7a81\u7834\u9888\u7ebf\uff0c\u6697\u793a\u4e0b\u8dcc\u52a8\u80fd\u8870\u7aed\u3001\u8d8b\u52bf\u53ef\u80fd\u53cd\u8f6c\u6216\u5ef6\u7eed\u4e0a\u884c", "confidence": "\u4e2d\u9ad8", "points": [{"time": "2026-08-26", "price": 0.13462, "label": "\u5de6\u5e95"}, {"time": "2026-09-13", "price": 0.13475, "label": "\u53f3\u5e95"}, {"time": "2026-09-18", "price": 0.19936, "label": "\u7a81\u7834\u2191"}], "neckline": 0.19, "neck_from": "2026-08-26", "neck_to": "2026-09-21"};
 
+
+/* ===== UI v2: price format + tooltip ===== */
+function _uiPricePrecision(p){
+  var a = Math.abs(Number(p)||0);
+  if(!a) return 2;
+  if(a >= 100) return 2;
+  if(a >= 1) return 3;
+  if(a >= 0.1) return 4;
+  if(a >= 0.01) return 5;
+  if(a >= 0.001) return 6;
+  var exp = Math.floor(Math.log10(a));
+  return Math.min(12, Math.max(6, -exp + 3));
+}
+function _uiFormatPrice(p){
+  if(p==null || !isFinite(p)) return '—';
+  var prec = _uiPricePrecision(p);
+  var s = Number(p).toFixed(prec);
+  if(Math.abs(p) < 0.01){
+    // trim only trailing zeros beyond needed sig, keep leading zeros after decimal
+    return s;
+  }
+  return s.replace(/\.?0+$/,'') === '' ? s : s;
+}
+function _uiMinMove(p){
+  var prec = _uiPricePrecision(p);
+  return Math.pow(10, -prec);
+}
+function _uiFmtVol(v){
+  if(v==null || !isFinite(v)) return '—';
+  if(v >= 1e9) return (v/1e9).toFixed(2)+'B';
+  if(v >= 1e6) return (v/1e6).toFixed(2)+'M';
+  if(v >= 1e3) return (v/1e3).toFixed(2)+'K';
+  return String(Math.round(v));
+}
+function _uiInstallTooltip(chart, chartEl, candleSeries, klines, volumes){
+  var tip = document.createElement('div');
+  tip.id = 'ohlc_tip';
+  tip.style.cssText = 'display:none;position:absolute;z-index:20;pointer-events:none;background:rgba(15,23,42,.92);color:#f8fafc;padding:8px 10px;border-radius:8px;font-size:12px;line-height:1.45;min-width:160px;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+  chartEl.style.position = 'relative';
+  chartEl.appendChild(tip);
+  var byTime = {};
+  for(var i=0;i<klines.length;i++) byTime[klines[i].time] = {k:klines[i], i:i};
+  var volBy = {};
+  if(volumes) for(var j=0;j<volumes.length;j++) volBy[volumes[j].time] = volumes[j].value;
+  chart.subscribeCrosshairMove(function(param){
+    if(!param || param.time === undefined || !param.point || param.point.x < 0 || param.point.y < 0){
+      tip.style.display = 'none'; return;
+    }
+    var t = param.time;
+    // business day string
+    var key = (typeof t === 'object' && t.year) ? (t.year+'-'+String(t.month).padStart(2,'0')+'-'+String(t.day).padStart(2,'0')) : t;
+    var row = byTime[key];
+    var d = param.seriesData && param.seriesData.get ? param.seriesData.get(candleSeries) : null;
+    if(!d && row) d = row.k;
+    if(!d){ tip.style.display='none'; return; }
+    var o=d.open, h=d.high, l=d.low, c=d.close;
+    var chg = (o && o!==0) ? ((c-o)/o*100) : null;
+    var chgStr = chg==null ? '—' : ((chg>=0?'+':'')+chg.toFixed(2)+'%');
+    var chgColor = chg==null ? '#94a3b8' : (chg>=0 ? '#4ade80' : '#f87171');
+    var vol = volBy[key];
+    tip.innerHTML =
+      '<div style="font-weight:700;margin-bottom:4px">'+key+'</div>'+
+      '<div>开 <b>'+_uiFormatPrice(o)+'</b></div>'+
+      '<div>高 <b>'+_uiFormatPrice(h)+'</b></div>'+
+      '<div>低 <b>'+_uiFormatPrice(l)+'</b></div>'+
+      '<div>收 <b>'+_uiFormatPrice(c)+'</b></div>'+
+      '<div>涨跌 <b style="color:'+chgColor+'">'+chgStr+'</b></div>'+
+      '<div>量 <b>'+_uiFmtVol(vol)+'</b></div>';
+    tip.style.display = 'block';
+    var x = param.point.x + 16;
+    var y = param.point.y + 16;
+    var tw = tip.offsetWidth || 170;
+    var th = tip.offsetHeight || 120;
+    if(x + tw > chartEl.clientWidth - 8) x = param.point.x - tw - 12;
+    if(y + th > chartEl.clientHeight - 8) y = param.point.y - th - 8;
+    if(x < 4) x = 4; if(y < 4) y = 4;
+    tip.style.left = x + 'px';
+    tip.style.top = y + 'px';
+  });
+}
+
 const chartEl = document.getElementById('tv_chart');
 const chart = LightweightCharts.createChart(chartEl, {
+  localization: { priceFormatter: _uiFormatPrice },
   layout: { background: { color: '#ffffff' }, textColor: '#334155' },
   grid: { vertLines: { color: '#f1f5f9' }, horzLines: { color: '#f1f5f9' } },
   crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
@@ -278,6 +371,7 @@ const chart = LightweightCharts.createChart(chartEl, {
 const candleSeries = chart.addCandlestickSeries({
   upColor: '#16a34a', downColor: '#dc2626', borderUpColor: '#16a34a',
   borderDownColor: '#dc2626', wickUpColor: '#16a34a', wickDownColor: '#dc2626',
+  priceFormat: { type: 'price', precision: 4, minMove: 0.0001 },
 });
 candleSeries.setData(KLINES);
 
@@ -285,8 +379,8 @@ const volSeries = chart.addHistogramSeries({ priceFormat: { type: 'volume' }, pr
 chart.priceScale('vol').applyOptions({ scaleMargins: { top: 0.8, bottom: 0 } });
 volSeries.setData(VOLUMES);
 
-const ma20Series = chart.addLineSeries({ color: '#2563eb', lineWidth: 2, title: 'MA20' });
-const ma50Series = chart.addLineSeries({ color: '#d97706', lineWidth: 2, title: 'MA50' });
+const ma20Series = chart.addLineSeries({ color: '#2563eb', lineWidth: 2, title: 'MA20' , priceFormat: { type: 'price', precision: 4, minMove: 0.0001 } });
+const ma50Series = chart.addLineSeries({ color: '#d97706', lineWidth: 2, title: 'MA50' , priceFormat: { type: 'price', precision: 4, minMove: 0.0001 } });
 ma20Series.setData(MA20);
 ma50Series.setData(MA50);
 

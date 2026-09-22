@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T22:07:00+08:00",
+  "updated_at": "2026-09-22T22:25:00+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -19,7 +19,8 @@
       "aliases": [
         "ENA-20260922-v2.html"
       ],
-      "note": "同日修图版；v2 为同源副本"
+      "note": "同日修图版；v2 为同源副本；UI v2",
+      "ui_version": "v2"
     },
     {
       "ticker": "TRUMP",
@@ -29,7 +30,9 @@
       "generated_at": "2026-09-22T21:27:00+08:00",
       "score": 3.9,
       "advice": "回避",
-      "file": "TRUMP-20260922-2128-v1.html"
+      "file": "TRUMP-20260922-2128-v1.html",
+      "note": "UI v2",
+      "ui_version": "v2"
     },
     {
       "ticker": "PEPE",
@@ -39,7 +42,9 @@
       "generated_at": "2026-09-22T22:01:00+08:00",
       "score": 6.4,
       "advice": "观察",
-      "file": "PEPE-20260922-2201.html"
+      "file": "PEPE-20260922-2201.html",
+      "note": "UI v2",
+      "ui_version": "v2"
     }
   ]
 }
