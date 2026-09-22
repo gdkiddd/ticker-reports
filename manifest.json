@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T22:59:07+08:00",
+  "updated_at": "2026-09-22T23:08:18+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -79,6 +79,30 @@
       "score": 4.5,
       "advice": "回避",
       "file": "PEOPLE-20260922.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "BTC",
+      "name": "Bitcoin",
+      "type": "crypto",
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T23:07:58+08:00",
+      "score": 7.3,
+      "advice": "轻仓观察",
+      "file": "BTC-20260922.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "ETH",
+      "name": "Ethereum",
+      "type": "crypto",
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T23:07:58+08:00",
+      "score": 7.2,
+      "advice": "轻仓观察",
+      "file": "ETH-20260922.html",
       "note": "UI v2",
       "ui_version": "v2"
     }
