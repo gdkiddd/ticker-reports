@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T22:25:00+08:00",
+  "updated_at": "2026-09-22T22:59:07+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -43,6 +43,42 @@
       "score": 6.4,
       "advice": "观察",
       "file": "PEPE-20260922-2201.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "DOGE",
+      "name": "Dogecoin",
+      "type": "crypto",
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T22:59:07+08:00",
+      "score": 6.0,
+      "advice": "观察",
+      "file": "DOGE-20260922.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "SOL",
+      "name": "Solana",
+      "type": "crypto",
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T22:59:07+08:00",
+      "score": 7.4,
+      "advice": "轻仓观察",
+      "file": "SOL-20260922.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "PEOPLE",
+      "name": "ConstitutionDAO",
+      "type": "crypto",
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T22:59:07+08:00",
+      "score": 4.5,
+      "advice": "回避",
+      "file": "PEOPLE-20260922.html",
       "note": "UI v2",
       "ui_version": "v2"
     }
