@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T23:08:18+08:00",
+  "updated_at": "2026-10-13T16:32:00+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -104,6 +104,18 @@
       "advice": "轻仓观察",
       "file": "ETH-20260922.html",
       "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "type": "equity",
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T16:31:00+08:00",
+      "score": 5.4,
+      "advice": "观察，回调分批",
+      "file": "TSLA-20261013.html",
+      "note": "UI v2；含估值拆分/SpaceX/建仓专题",
       "ui_version": "v2"
     }
   ]
