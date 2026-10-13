@@ -1,0 +1,16 @@
+name = "ticker-reports"
+account_id = "224fcf34dc9b4f18a923ba1f4960fc75"
+compatibility_date = "2026-10-13"
+main = "src/index.js"
+workers_dev = false
+
+[assets]
+directory = "./cf-publish"
+binding = "ASSETS"
+html_handling = "none"
+not_found_handling = "none"
+run_worker_first = [ "/reports", "/reports/" ]
+
+[[routes]]
+pattern = "kiddd.top/reports*"
+zone_name = "kiddd.top"
