@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T16:32:00+08:00",
+  "updated_at": "2026-10-13T16:54:20+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -116,6 +116,42 @@
       "advice": "观察，回调分批",
       "file": "TSLA-20261013.html",
       "note": "UI v2；含估值拆分/SpaceX/建仓专题",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "ENA",
+      "name": "Ethena",
+      "type": "crypto",
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T16:54:20+08:00",
+      "score": 6.7,
+      "advice": "轻仓观察",
+      "file": "ENA-20261013.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "ZAMA",
+      "name": "Zama",
+      "type": "crypto",
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T16:54:20+08:00",
+      "score": 6.2,
+      "advice": "观察",
+      "file": "ZAMA-20261013.html",
+      "note": "UI v2",
+      "ui_version": "v2"
+    },
+    {
+      "ticker": "UNI",
+      "name": "Uniswap",
+      "type": "crypto",
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T16:54:20+08:00",
+      "score": 6.8,
+      "advice": "轻仓观察",
+      "file": "UNI-20261013.html",
+      "note": "UI v2",
       "ui_version": "v2"
     }
   ]
