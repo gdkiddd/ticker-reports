@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T10:57:32+08:00",
+  "updated_at": "2026-10-28T18:14:00+08:00",
   "timezone": "Asia/Taipei",
   "rules": {
     "one_report_per_ticker_per_day": true,
@@ -187,6 +187,39 @@
       "file": "SPACEX-20261015.html",
       "ui_version": "v2",
       "note": "上市前估值与 IPO 历史专题；现已上市 SPCX；无 OHLC"
+    },
+    {
+      "ticker": "NVO",
+      "name": "诺和诺德 Novo Nordisk",
+      "type": "equity",
+      "date": "2026-10-16",
+      "generated_at": "2026-10-16T23:59:52+08:00",
+      "score": 6.2,
+      "advice": "小仓研究，主仓等财报确认",
+      "file": "NVO-20261016.html",
+      "note": "本地研究稿；主观研究分，KOL不足未做原模板加权"
+    },
+    {
+      "ticker": "PFE",
+      "name": "辉瑞 Pfizer",
+      "type": "equity",
+      "date": "2026-10-16",
+      "generated_at": "2026-10-16T23:59:52+08:00",
+      "score": 5.6,
+      "advice": "等待回调，关注股息现金覆盖",
+      "file": "PFE-20261016.html",
+      "note": "本地研究稿；主观研究分，KOL不足未做原模板加权"
+    },
+    {
+      "ticker": "PEPE",
+      "name": "Pepe",
+      "type": "crypto",
+      "date": "2026-10-28",
+      "generated_at": "2026-10-28T18:14:00+08:00",
+      "score": 6.1,
+      "advice": "观望，FOMC后回踩再小仓",
+      "file": "PEPE-20261028.html",
+      "ui_version": "v2"
     }
   ]
 }
